@@ -7,42 +7,15 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Ionicons } from '@expo/vector-icons';
 
-import { colors } from '../theme/Theme'
+import { colors } from '../theme/Theme';
+
+import trips from '../data/trips'
 
 
 export default function Trip() {
 
 
     const navigation = useNavigation();
-
-  DATA = [
-    {
-      id: 0,
-      startPoint: 'Rome',
-      startCountry: 'Italy',
-      endPoint: 'Napoli',
-      endCountry: 'Italy',
-      startDate: '12-05-2023',
-      endDate: '19-05-2023',
-      totalPrice: '$ 3,455',
-      image: require('../assets/rome.jpeg'),
-      current: true
-
-    },
-    {
-      id: 1,
-      startPoint: 'London',
-      startCountry: 'UK',
-      endPoint: 'Liverpool',
-      endCountry: 'UK',
-      startDate: '02-10-2023',
-      endDate: '07-10-2023',
-      totalPrice: '$ 3,455',
-      image: require('../assets/london.jpeg'),
-      current: false
-
-    }
-  ]
 
   const Item = ({item, navigation}) => {
     return(
@@ -58,7 +31,7 @@ export default function Trip() {
       onPress={() => navigation.navigate('TripDetails', {item})}
       >
         <Image 
-          source={item.image} 
+          source={{uri:item.photo}} 
           style={{
             width: 80,
             height: 80,
@@ -83,12 +56,12 @@ export default function Trip() {
                 color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: 'bold'
-              }}>{item.startPoint}</Text>
+              }}>{item.startPlace.city}</Text>
               <Text style={{
                 color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: '300'
-              }}>, {item.startCountry}</Text>
+              }}>, {item.startPlace.country}</Text>
             </View>
             <Text style={{
               color: item.current ? colors.text : colors.grey_d,
@@ -96,7 +69,7 @@ export default function Trip() {
               fontWeight: '300',
               marginRight: 30,
               fontWeight: 'bold'
-            }}>{item.startDate}</Text>
+            }}>{item.firstDepartureDate}</Text>
           </View>
           <View style={{
             width: 290,
@@ -111,12 +84,12 @@ export default function Trip() {
                 color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: 'bold'
-              }}>{item.endPoint}</Text>
+              }}>{item.endPlace.city}</Text>
               <Text style={{
                 color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: '300'
-              }}>, {item.endCountry}</Text>
+              }}>, {item.endPlace.country}</Text>
             </View>
             <Text style={{
               color: item.current ? colors.text : colors.grey_d,
@@ -124,7 +97,7 @@ export default function Trip() {
               fontWeight: '300',
               marginRight: 30,
               fontWeight: 'bold'
-            }}>{item.endDate}</Text>
+            }}>{item.lastDepartureDate}</Text>
           </View>
         </View>
         
@@ -140,7 +113,7 @@ export default function Trip() {
         style={{
           width: '100%'
         }}
-        data={DATA}
+        data={trips}
         renderItem={({item}) => <Item item={item} navigation={navigation} />}
         keyExtractor={item => item.id}
       />
