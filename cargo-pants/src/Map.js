@@ -14,8 +14,6 @@ import { Ionicons } from '@expo/vector-icons';
 
 import markers from '../data/markers';
 
-
-
 export default function Map() {
 
     const mapRef = useRef();
