@@ -142,7 +142,6 @@ export default function TravelIdea() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     paddingTop: 100,
     paddingHorizontal: 20,
   },

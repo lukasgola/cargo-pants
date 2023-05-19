@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //Screens
 import Trip from '../src/Trip';
+import TripDetails from '../src/TripDetails';
 
 //Theme
 import {colors} from '../theme/Theme';
@@ -29,6 +30,13 @@ export default function TripStack() {
                 component={Trip} 
                 options={{
                     headerTitle: () => <Text>Trip</Text>
+                }}
+            />
+            <Stack.Screen 
+                name='TripDetails' 
+                component={TripDetails} 
+                options={{
+                    headerTitle: () => <Text>Trip Details</Text>
                 }}
             />
 
