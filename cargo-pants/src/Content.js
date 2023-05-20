@@ -1,13 +1,41 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Pressable, Alert } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, Alert, FlatList, Image } from 'react-native';
 import { useEffect, useState } from 'react';
 
 export default function Content() {
 
 
+  data = [
+    {
+      id: 1,
+      photo: require('../assets/ttc1.jpeg')
+    },
+    {
+      id: 2,
+      photo: require('../assets/ttc2.jpeg')
+    },
+  ]
+
+
+  const Item = ({item}) => {
+    return(
+      <View style={{width: '100%'}}>
+        <Image source={item.photo} resizeMode='center' style={{width: 450, height: 340}} />
+      </View>
+    )
+  }
+
+
   return (
     <View style={styles.container}>
-      <Text>Content</Text>
+      <FlatList
+          style={{
+              width: '100%',
+          }}
+          data={data}
+          renderItem={({item}) => <Item item={item} />}
+          keyExtractor={item => item.id}
+      />
     </View>
   );
 }

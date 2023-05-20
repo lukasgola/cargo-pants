@@ -23,5 +23,11 @@ export default [
         latitude: 50.21750,
         longitude: 18.57658
     },
+    {
+        id: 5,
+        type: 'guide',
+        latitude: 50.25750,
+        longitude: 18.62658
+    },
 
 ]

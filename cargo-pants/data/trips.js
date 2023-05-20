@@ -1,6 +1,6 @@
 export default [
     {
-        "current": false,
+        "current": true,
         "id": 2,
         "sellingRegion": "au",
         "fromPrice": {
@@ -13,7 +13,7 @@ export default [
         "durationMin": 9,
         "durationMax": 9,
         "firstDepartureDate": "2023-05-21",
-        "lastDepartureDate": "2024-09-22",
+        "lastDepartureDate": "2023-05-30",
         "discounts": [
             "pastPassenger"
         ],

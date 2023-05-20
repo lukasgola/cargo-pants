@@ -12,8 +12,8 @@ export default [
         },
         "durationMin": 9,
         "durationMax": 9,
-        "firstDepartureDate": "2023-05-21",
-        "lastDepartureDate": "2024-09-22",
+        "firstDepartureDate": "2023-06-13",
+        "lastDepartureDate": "2023-05-22",
         "discounts": [
             "pastPassenger"
         ],
@@ -47,8 +47,8 @@ export default [
         },
         "durationMin": 2,
         "durationMax": 4,
-        "firstDepartureDate": "2023-05-16",
-        "lastDepartureDate": "2025-04-09",
+        "firstDepartureDate": "2023-06-16",
+        "lastDepartureDate": "2023-06-20",
         "discounts": [
             "pastPassenger"
         ],
@@ -82,8 +82,8 @@ export default [
         },
         "durationMin": 2,
         "durationMax": 3,
-        "firstDepartureDate": "2023-05-16",
-        "lastDepartureDate": "2024-03-29",
+        "firstDepartureDate": "2023-07-16",
+        "lastDepartureDate": "2023-07-19",
         "discounts": [],
         "contentId": "LE3DA18",
         "startPlace": {
