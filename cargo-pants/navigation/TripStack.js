@@ -29,7 +29,7 @@ export default function TripStack() {
                 name='Trip' 
                 component={Trip} 
                 options={{
-                    headerTitle: () => <Text>Trip</Text>
+                    headerTitle: () => <Text>Trips</Text>
                 }}
             />
             <Stack.Screen 

@@ -8,11 +8,11 @@ export default function Content() {
   data = [
     {
       id: 1,
-      photo: require('../assets/ttc1.jpeg')
+      photo: require('../assets/ttc4.jpeg')
     },
     {
       id: 2,
-      photo: require('../assets/ttc2.jpeg')
+      photo: require('../assets/ttc3.jpeg')
     },
   ]
 
@@ -20,7 +20,7 @@ export default function Content() {
   const Item = ({item}) => {
     return(
       <View style={{width: '100%'}}>
-        <Image source={item.photo} resizeMode='center' style={{width: 450, height: 340}} />
+        <Image source={item.photo} resizeMode='center' style={{width: 450, height: 300, marginTop: 20}} />
       </View>
     )
   }
