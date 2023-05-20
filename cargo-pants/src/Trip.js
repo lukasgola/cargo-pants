@@ -9,7 +9,8 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { colors } from '../theme/Theme';
 
-import trips from '../data/trips'
+import trips from '../data/trips';
+import recommended from '../data/recommended';
 
 
 export default function Trip() {
@@ -38,7 +39,6 @@ export default function Trip() {
             borderRadius: 40,
             marginTop: 10,
             marginLeft: 10,
-            opacity: item.current ? 1 : 0.5
           }}
         />
         <View style={{marginLeft: 10}}>
@@ -53,18 +53,15 @@ export default function Trip() {
           }}>
             <View style={{flexDirection: 'row', height: 50}}>
               <Text style={{
-                color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: 'bold'
               }}>{item.startPlace.city}</Text>
               <Text style={{
-                color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: '300'
               }}>, {item.startPlace.country}</Text>
             </View>
             <Text style={{
-              color: item.current ? colors.text : colors.grey_d,
               fontSize: 18,
               fontWeight: '300',
               marginRight: 30,
@@ -81,18 +78,15 @@ export default function Trip() {
           }}>
             <View style={{flexDirection: 'row', height: 50}}>
               <Text style={{
-                color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: 'bold'
               }}>{item.endPlace.city}</Text>
               <Text style={{
-                color: item.current ? colors.text : colors.grey_d,
                 fontSize: 18,
                 fontWeight: '300'
               }}>, {item.endPlace.country}</Text>
             </View>
             <Text style={{
-              color: item.current ? colors.text : colors.grey_d,
               fontSize: 18,
               fontWeight: '300',
               marginRight: 30,
@@ -108,23 +102,32 @@ export default function Trip() {
 
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
+      <View style={{width: '100%', paddingTop: 20, paddingLeft: 20}}>
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Your Travels</Text>
+      </View>
+      
+      <FlatList
+        style={{
+          width: '100%',
+        }}
+        data={trips}
+        renderItem={({item}) => <Item item={item} navigation={navigation} />}
+        keyExtractor={item => item.id}
+      />
+
+      <View style={{width: '100%', marginTop: 30, paddingTop: 20, paddingLeft: 20}}>
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Recommended Trips</Text>
+      </View>
+
       <FlatList
         style={{
           width: '100%'
         }}
-        data={trips}
+        data={recommended}
         renderItem={({item}) => <Item item={item} navigation={navigation} />}
         keyExtractor={item => item.id}
       />
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-});

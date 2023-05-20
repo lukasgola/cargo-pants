@@ -19,7 +19,7 @@ export default function Travellers() {
 
   const Item = ({item, navigation}) => {
     return(
-      <TouchableOpacity style={{
+      <View style={{
         width: '90%',
         height: 100,
         marginLeft: '5%',
@@ -61,7 +61,7 @@ export default function Travellers() {
               }}> {item.secondName}</Text>
             </View>
             <View style={{flexDirection: 'row'}}>
-              <View style={{
+              <TouchableOpacity style={{
                 width: '30%',
                 height: 40,
                 backgroundColor: '#f3f3f2',
@@ -71,8 +71,8 @@ export default function Travellers() {
                 justifyContent: 'center'
               }}>
                 <Ionicons name='call-outline' size={25} color={colors.text} />
-              </View>
-              <View style={{
+              </TouchableOpacity>
+              <TouchableOpacity style={{
                 width: '30%',
                 height: 40,
                 backgroundColor: '#f3f3f2',
@@ -82,8 +82,8 @@ export default function Travellers() {
                 justifyContent: 'center'
               }}>
                 <Ionicons name='chatbubbles-outline' size={25} color={colors.text} />
-              </View>
-              <View style={{
+              </TouchableOpacity>
+              <TouchableOpacity style={{
                 width: '30%',
                 height: 40,
                 backgroundColor: '#f3f3f2',
@@ -92,14 +92,14 @@ export default function Travellers() {
                 justifyContent: 'center'
               }}>
                 <Ionicons name='location-outline' size={25} color={colors.text} />
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
           
         </View>
         
 
-      </TouchableOpacity>
+      </View>
     )
   }
 
