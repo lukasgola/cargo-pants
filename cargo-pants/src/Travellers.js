@@ -59,6 +59,11 @@ export default function Travellers() {
                 fontSize: 18,
                 fontWeight: '300'
               }}> {item.secondName}</Text>
+              {item.guide ? <Text style={{
+                color: "red",
+                fontSize: 18,
+                fontWeight: 'bold',
+              }}> (Guide)</Text> : <View></View>}
             </View>
             <View style={{flexDirection: 'row'}}>
               <TouchableOpacity style={{
