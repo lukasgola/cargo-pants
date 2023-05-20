@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import BottomTabs from './navigation/BottomTabs';
 
+import Ideas from './src/Ideas';
+
 export default function App() {
 
     const Indicator = () => {
