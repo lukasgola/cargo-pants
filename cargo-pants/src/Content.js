@@ -8,11 +8,11 @@ export default function Content() {
   data = [
     {
       id: 1,
-      photo: require('../assets/ttc4.jpeg')
+      photo: require('../assets/london.jpeg')
     },
     {
       id: 2,
-      photo: require('../assets/ttc3.jpeg')
+      photo: require('../assets/rome.jpeg')
     },
   ]
 
