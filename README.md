@@ -1,6 +1,6 @@
 # Travelling App
 
-### An application created on Hackaton "Future Traveller" hosted by Travcorp Poland
+### An application created in 24h on Hackaton "Future Traveller" hosted by Travcorp Poland
 
 - React Native
 
