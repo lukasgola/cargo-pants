@@ -10,9 +10,9 @@
 
 ## Preview
 <div>
-  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/732shots_so.jpg' width=300 />
-  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/391shots_so.jpg' width=300 />
-  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/438shots_so.jpg' width=300 />
-  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/472shots_so.jpg' width=300 />
-  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/59shots_so.jpg' width=300 />
+  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/131shots_so.png' width=300 />
+  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/160shots_so.png' width=300 />
+  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/270shots_so.png' width=300 />
+  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/536shots_so.png' width=300 />
+  <img src='https://github.com/lukasgola/cargo-pants/blob/main/cargo-pants/assets/663shots_so.png' width=300 />
 </div>
